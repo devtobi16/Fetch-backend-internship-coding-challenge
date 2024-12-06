@@ -1,0 +1,51 @@
+### Points Management API
+
+The API manages point transactions for user, allowing them to:
+
+1.Add Points
+2.Spend Points
+3.Get Balance.
+
+### Endpoints
+
+1.`(POST Request) /add` - Adds points through a payer.
+
+Request: JSON with `payer`, `points`, and `timestamp`.
+Response: `200 OK` if successful.
+
+2.`(POST Request) /spend` - Spend a specified amount of points.
+
+Request: JSON with `points` to spend.
+Response: `200 OK` with a list of deducted points from each payer, or `400 Bad Request` if not enough points.
+
+3.`(GET Request) /balance` - Get the current balance of points for each payer.
+Response: JSON object showing each payer and their remaining points.
+
+### Examples
+
+1 Add Transactions\*\*:
+
+- Adds points from different payers with timestamps.
+
+2 Spend Points:
+
+- Spend points that deducts from the oldest transactions first.
+
+3 Get Balance\*\*:
+
+- After spending, the balance shows remaining points for each payer.
+
+### Running the API
+
+1 Install dependencies: `npm install`
+2 Run the server: `npm start`
+3 Test the endpoints using tools like Postman.
+
+### Error Handling
+
+- Invalid inputs will return `400 Bad Request`.
+- If there are not enough points to spend, the response is `400 Not enough points`.
+
+### Notes
+
+- The API works with a single user, and all data is stored in memory (will be lost on restart).

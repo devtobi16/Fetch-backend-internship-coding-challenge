@@ -1,0 +1,15 @@
+﻿1. I chose Node.js with Express for building the API because it’s fast to set up, widely used, and allows for easy handling of RESTful requests. Express is lightweight, scalable, and well-suited for building APIs quickly. Joi was used for input validation due to its simplicity and flexibility, ensuring the incoming data (e.g., `payer`, `points`, `timestamp`) is correct. Using JavaScript on both the server and client simplifies development and debugging. This combination of tools and libraries makes the development of software like APIs a lot faster while keeping the solution clean and maintainable without additional complexity like database setup, which is not necessary for this single-user example. 
+ 
+   2a.  Advantages 
+* Quick Setup: Using Node.js and Express allows fast development with minimal configuration. 
+* Scalable: Express can easily handle more complex requirements if needed in the future. 
+* Easy Validation: Joi simplifies input validation, reducing the risk of errors. 
+* Lightweight: No external database required, making it simple to manage in-memory data for this single-user scenario. 
+ 
+  2b.  Disadvantages  
+* Data is lost when the server restarts, limiting long-term usage. 
+* This solution is designed for one user; scaling for multiple users requires more work. 
+* Without a database, there is no permanent storage for transaction history. 
+ 
+ 
+      3. My favorite project so far has been building a movie rating app. The most challenging part was integrating the right OMDb API to fetch movie data and then converting that data into a user-friendly format on the frontend. I had to ensure the data was displayed cleanly, dealing with issues like missing or inconsistent fields, and formatting it for better readability. The experience taught me a lot about API handling, data parsing, and ensuring a smooth user interface.
